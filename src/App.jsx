@@ -17,7 +17,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/class-portfolio">
       <ThemeProvider>
         <AuthProvider>
           <WorksProvider>
