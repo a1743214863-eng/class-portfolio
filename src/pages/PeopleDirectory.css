@@ -1,0 +1,93 @@
+.people-dir {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.people-dir__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.people-dir__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.people-dir__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0 0 0.5rem;
+}
+
+.people-dir__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.people-dir__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.people-dir__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.people-dir__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(44, 44, 44, 0.1);
+}
+
+.people-dir__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #a855f7);
+  color: #0a0a0a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.people-dir__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-h2);
+  text-align: center;
+}
+
+.people-dir__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .people-dir {
+    padding: 2rem 1.25rem 3rem;
+  }
+}

@@ -1,0 +1,44 @@
+.typewriter-slogan {
+  margin: 1.25rem auto 0;
+  max-width: 900px;
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  min-height: 1.2em;
+  color: var(--color-text-body);
+}
+
+.typewriter-slogan__text {
+  color: var(--color-text);
+}
+
+.typewriter-slogan__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  background: var(--df-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  font-weight: 400;
+}
+
+.typewriter-slogan__cursor--on {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-slogan__cursor {
+    display: none;
+  }
+}
+
+[data-theme='dark'] .typewriter-slogan__text {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .typewriter-slogan {
+  text-shadow: var(--text-glow-title);
+}

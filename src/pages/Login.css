@@ -1,0 +1,123 @@
+.login {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.login__panel {
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--neon-glow-sm);
+}
+
+.login__title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.login__subtitle {
+  font-size: var(--font-size-body);
+  color: var(--color-text-body);
+  text-align: center;
+  margin: 0 0 1.75rem;
+  line-height: 1.6;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login__label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-body);
+}
+
+.login__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color-scheme: light;
+}
+
+[data-theme='dark'] .login__input {
+  background: rgba(14, 14, 22, 0.92);
+  color-scheme: dark;
+}
+
+.login__input:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.login__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.12);
+}
+
+.login__error {
+  color: #ff6b8a;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.login__submit {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.login__demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.login__demo-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.login__demo-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .login {
+    padding: 2rem 1.25rem 3rem;
+  }
+}

@@ -1,0 +1,36 @@
+.detail-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.detail-page__nav {
+  padding: 1.5rem 0;
+}
+
+.detail-page__back {
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.detail-page__back:hover {
+  color: var(--color-accent);
+}
+
+.detail-page__panel {
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(44, 44, 44, 0.06);
+  border: 1px solid var(--surface-glass-border);
+}
+
+@media (max-width: 640px) {
+  .detail-page {
+    padding: 0 1.25rem 3rem;
+  }
+}

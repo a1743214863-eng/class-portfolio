@@ -1,0 +1,50 @@
+.intro-tags {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.intro-tags__lead {
+  margin: 0 0 1rem;
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+  letter-spacing: 0;
+  line-height: 1.75;
+}
+
+.intro-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intro-tags__pill {
+  padding: 0.45rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--df-gradient);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.intro-tags__pill:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .intro-tags {
+    padding: 0 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,28 @@
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+}
+
+.category-tag--pill {
+  padding: 0.35rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+}
+
+.category-tag--detail {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.category-tag__icon {
+  line-height: 1;
+}
+
+.category-tag__label {
+  line-height: 1.2;
+}

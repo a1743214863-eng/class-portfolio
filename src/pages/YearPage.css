@@ -1,0 +1,171 @@
+.year-page {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.year-page__header {
+  text-align: center;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.year-page__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.year-page__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.year-page__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.year-page__semesters {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0 2rem 1.25rem;
+}
+
+.year-page__semester {
+  padding: 0.55rem 1.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  color: var(--color-text-body);
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.year-page__semester:hover {
+  border-color: #b7a89a;
+}
+
+.year-page__semester--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.year-page__section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 1rem;
+}
+
+.year-page__section-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-h2);
+  margin: 0;
+}
+
+.year-page__section-count {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.year-page__grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.year-page__grid .project-card-wrap {
+  break-inside: avoid;
+  margin-bottom: 0;
+}
+
+.year-page__empty,
+.year-page__invalid {
+  text-align: center;
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+}
+
+.year-page__empty-icon,
+.year-page__invalid-icon {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.year-page__empty-text,
+.year-page__invalid-text {
+  color: var(--color-text-body);
+  margin: 0 0 1rem;
+}
+
+.year-page__invalid-title {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+}
+
+.year-page__empty-link,
+.year-page__invalid-link {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.year-page__empty-link:hover,
+.year-page__invalid-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .year-page__grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .year-page__header {
+    padding: 2rem 1.25rem 1.25rem;
+  }
+
+  .year-page__semesters {
+    padding: 0 1.25rem 1rem;
+  }
+
+  .year-page__section-head {
+    padding: 0 1.25rem 0.75rem;
+  }
+
+  .year-page__grid {
+    column-count: 1;
+    padding: 0 1.25rem 1.5rem;
+  }
+}

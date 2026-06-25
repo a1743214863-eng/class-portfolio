@@ -1,0 +1,218 @@
+.profile {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 44, 44, 0.05);
+}
+
+.profile__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #a855f7);
+  color: #0a0a0a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__title {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0 0 0.25rem;
+}
+
+.profile__name {
+  font-size: var(--font-size-body);
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.profile__logout {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-body);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.profile__logout:hover {
+  border-color: var(--color-text-body);
+  color: var(--color-text-body);
+}
+
+.profile__public-link-wrap {
+  margin: -1rem 0 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.profile__public-link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.profile__public-link:hover {
+  text-decoration: underline;
+}
+
+.profile__section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile__add-btn {
+  flex-shrink: 0;
+  padding: 0.45rem 1rem;
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+
+.profile__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile__tab {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.profile__tab:hover {
+  border-color: rgba(168, 85, 247, 0.45);
+  color: var(--color-text);
+}
+
+.profile__tab--active {
+  border-color: transparent;
+  background: var(--df-gradient);
+  color: #ffffff;
+}
+
+.profile__section + .profile__section {
+  margin-top: 2.5rem;
+}
+
+.profile__section-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-h2);
+  margin: 0;
+}
+
+.profile__section-count {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.profile__grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.profile__grid .project-card-wrap {
+  break-inside: avoid;
+  margin-bottom: 0;
+}
+
+.profile__empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+}
+
+.profile__empty-icon {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.profile__empty-text {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  margin: 0 0 0.35rem;
+}
+
+.profile__empty-hint {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.profile__empty-link {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.profile__empty-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .profile__grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .profile__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile__grid {
+    column-count: 1;
+  }
+}

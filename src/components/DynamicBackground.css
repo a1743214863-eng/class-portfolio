@@ -1,0 +1,92 @@
+/* Dynamic background: particles + grid + mouse glow */
+
+.dynamic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dynamic-bg__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+.dynamic-bg__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 200, 220, 0.08) 0%,
+    rgba(200, 210, 230, 0.05) 40%,
+    transparent 70%
+  );
+  will-change: transform;
+  pointer-events: none;
+}
+
+.dynamic-bg__fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #ffffff;
+}
+
+.dynamic-bg__toggle {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 110;
+  pointer-events: auto;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.dynamic-bg__toggle:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--neon-glow-sm);
+}
+
+[data-theme='dark'] .dynamic-bg__glow {
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.14) 0%,
+    rgba(168, 85, 247, 0.1) 35%,
+    transparent 68%
+  );
+}
+
+@media (max-width: 640px) {
+  .dynamic-bg__glow {
+    width: 450px;
+    height: 450px;
+  }
+
+  .dynamic-bg__toggle {
+    left: 0.75rem;
+    bottom: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dynamic-bg__glow {
+    display: none;
+  }
+}

@@ -1,0 +1,222 @@
+.work-detail__missing {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-muted);
+}
+
+.work-detail__gallery {
+  position: relative;
+  background: var(--color-text);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-detail__image {
+  width: 100%;
+  max-height: 55vh;
+  object-fit: contain;
+  display: block;
+}
+
+.work-detail__no-image {
+  color: #999;
+  padding: 4rem;
+}
+
+.work-detail__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--color-text);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.work-detail__nav:hover {
+  background: #fff;
+}
+
+.work-detail__nav--prev {
+  left: 1rem;
+}
+
+.work-detail__nav--next {
+  right: 1rem;
+}
+
+.work-detail__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.work-detail__dot {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 0;
+}
+
+.work-detail__dot--active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.work-detail__counter {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.65rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 999px;
+}
+
+.work-detail__body {
+  padding: 1.75rem 2rem 2rem;
+}
+
+.work-detail__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.work-detail__favorite-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.work-detail__favorite-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.work-detail__favorite-btn--active {
+  background: rgba(255, 248, 220, 0.95);
+  border-color: #d4a853;
+}
+
+.work-detail__login-hint {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.work-detail__login-link {
+  border: none;
+  background: none;
+  color: var(--color-text-body);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: inherit;
+}
+
+.work-detail__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3vw, 1.875rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0.75rem 0 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.work-detail__meta-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.work-detail__meta-row {
+  margin: 0;
+}
+
+.work-detail__meta-row dt {
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.work-detail__meta-row dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-body);
+}
+
+.work-detail__desc-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.work-detail__desc-text {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.work-detail--page .work-detail__image {
+  max-height: 70vh;
+}
+
+@media (max-width: 640px) {
+  .work-detail__body {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+
+  .work-detail__nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+
+  .work-detail__nav--prev {
+    left: 0.5rem;
+  }
+
+  .work-detail__nav--next {
+    right: 0.5rem;
+  }
+}

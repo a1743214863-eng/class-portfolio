@@ -1,0 +1,181 @@
+@import './styles/typography.css';
+
+/* DigitalFUTURES-inspired editorial theme */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #111111;
+  --color-text-h2: #111111;
+  --color-text-body: #444444;
+  --color-text-secondary: #444444;
+  --color-text-muted: #666666;
+  --color-stat: #9333ea;
+  --color-accent: #9333ea;
+  --color-accent-purple: #9333ea;
+  --color-border: #e8e8e8;
+
+  --df-gradient: linear-gradient(90deg, #e8298a 0%, #a855f7 52%, #4f46e5 100%);
+  --df-gradient-hover: linear-gradient(90deg, #f03598 0%, #b76bff 52%, #6366f1 100%);
+
+  --font-sans: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-sans);
+  --font-handwriting: var(--font-sans);
+
+  --font-size-hero: clamp(2.75rem, 7vw, 4.25rem);
+  --font-size-stat: clamp(2rem, 4vw, 2.75rem);
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+
+  --text-glow-title: none;
+  --text-glow-stat: none;
+
+  --surface-glass: #ffffff;
+  --surface-glass-border: #e8e8e8;
+  --surface-glass-blur: blur(8px);
+  --card-shadow: none;
+
+  --neon-glow: 0 8px 24px rgba(168, 85, 247, 0.18);
+  --neon-glow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --nav-glow: 0 1px 0 var(--color-border);
+
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+[data-theme='dark'] {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #0d0d0d;
+  --color-surface: rgba(20, 20, 30, 0.8);
+  --color-text: #ffffff;
+  --color-text-h2: #f0f0f0;
+  --color-text-body: #cccccc;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #999999;
+  --color-stat: #c084fc;
+  --color-accent: #c084fc;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --surface-glass: rgba(20, 20, 30, 0.8);
+  --surface-glass-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  --neon-glow: 0 8px 28px rgba(168, 85, 247, 0.25);
+  --nav-glow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+.text-gradient {
+  background: var(--df-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-heading {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+/* Shared card surfaces */
+.project-card__main,
+.section-cards__card,
+.featured__viewport,
+.home__stats,
+.about-page__card,
+.contact-page__card,
+.contact-page__form,
+.login__panel,
+.upload__form,
+.upload__header,
+.people-dir__card,
+.person-page__profile,
+.person-page__empty,
+.person-page__invalid,
+.year-page__empty,
+.year-page__invalid,
+.profile__header,
+.profile__empty,
+.detail-page__panel {
+  border: 1px solid var(--surface-glass-border);
+}
+
+/* Gradient pill button (DigitalFUTURES style) */
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.35rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--df-gradient);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.btn-neon:hover {
+  background: var(--df-gradient-hover);
+  color: #ffffff;
+  box-shadow: var(--neon-glow);
+  transform: translateY(-1px);
+}
+
+.btn-neon--filled {
+  background: var(--df-gradient);
+  color: #ffffff;
+}
+
+.btn-neon--filled:hover {
+  background: var(--df-gradient-hover);
+}
+
+[data-theme='dark'] .btn-neon:hover,
+[data-theme='dark'] .btn-neon--filled:hover {
+  color: #ffffff;
+}

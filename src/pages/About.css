@@ -1,0 +1,83 @@
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.about-page__hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-page__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+}
+
+.about-page__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: var(--text-glow-title);
+  margin: 0 0 1rem;
+}
+
+.about-page__lead {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+  line-height: 1.75;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.about-page__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-page__card {
+  padding: 1.75rem;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-glass-blur);
+  -webkit-backdrop-filter: var(--surface-glass-blur);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 12px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.about-page__card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: var(--neon-glow);
+  transform: translateY(-4px);
+}
+
+.about-page__card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-h2);
+  margin: 0 0 0.75rem;
+}
+
+.about-page__card-text {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-page__cta {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 2rem 1.25rem 3rem;
+  }
+}
